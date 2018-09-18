@@ -1,0 +1,11 @@
+<style>
+h1 {
+  text-align: center;
+}
+</style>
+
+<% if (Date.parse(session[:date]) - Date.today) % 365 == 0 %>
+<h1>HAPPY BIRTHDAY YOU DUMB NERD</h1>
+<% else %>
+<h1>Hello <%= session[:name] %>, you have <%= ((Date.parse(session[:date]) - Date.today) % 365).to_i %> days until your birthday</h1>
+<% end %>
