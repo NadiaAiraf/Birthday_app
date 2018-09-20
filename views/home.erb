@@ -1,36 +1,22 @@
-
-<style>
-h1 {
-  text-align: center;
-}
-
-span {
-  background-color: pink;
-  padding: 5px 50px 5px 50px;
-}
-
-div {
-  background-color: lightblue;
-  text-align: center;
-}
-
-body {
-  background-color: lightblue;
-}
-</style>
-
-
-
-<body>
-<h1><span>Hello there!</span></h1>
-<br>
-<div>
-<h2>What is your name?</h2>
-<form method="post" action="/birthday">
-  <input type="text" name="fname" placeholder="Type your first name" required><br>
-  <h2>When's your birthday?</h2>
-  <input type="date" name="bdate" required><br><br>
-  <input type="submit" value="Submit">
-</form>
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>homepage</title>
+    <link rel="stylesheet" href="/home.css">
+  </head>
+  
+  <body>
+    <h1><span>Hello there!</span></h1>
+    <br>
+    <div>
+      <h2>What is your name?</h2>
+      <form method="post" action="/birthday">
+        <input type="text" name="fname" placeholder="Type your first name" required><br>
+        <h2>When's your birthday?</h2>
+        <input type="date" name="bdate" required><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

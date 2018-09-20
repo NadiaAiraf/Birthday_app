@@ -1,6 +1,6 @@
 require 'date'
 
-class BirthDate
+class BirthdayCalcs
   attr_reader :name, :dob
   def initialize(name,dob)
     @name = name

@@ -1,0 +1,19 @@
+<style>
+h1 {
+  text-align: center;
+}
+
+span {
+  background-color: pink;
+  padding: 5px 50px 5px 50px;
+}
+
+div {
+  background-color: lightblue;
+  text-align: center;
+}
+
+body {
+  background-color: lightblue;
+}
+</style>

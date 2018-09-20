@@ -18,6 +18,7 @@ body {
   text-align: center;
   text-shadow: 2px 2px #FFFFFF;
   font-family: fantasy;
+  vertical-align: middle;
 }
 
 #cake{

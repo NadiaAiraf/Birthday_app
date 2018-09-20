@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require 'date'
-require './lib/birthdate.rb'
+require './lib/birthday_calcs.rb'
 
 class Birthday < Sinatra::Base
   enable :sessions
@@ -16,7 +16,7 @@ class Birthday < Sinatra::Base
   end
 
   post '/birthday' do
-    session[:birthday] = BirthDate.new(params[:fname],params[:bdate])
+    session[:birthday] = BirthdayCalcs.new(params[:fname],params[:bdate])
     if session[:birthday].birthday_today?
       redirect '/birthday'
     else

@@ -1,7 +1,7 @@
-require 'birthdate'
+require 'birthday_calcs'
 require 'date'
 
-describe BirthDate do
+describe BirthdayCalcs do
   let(:mybirthday) { described_class.new('aidan','1992-03-15') }
 
   describe '#name' do
@@ -37,6 +37,4 @@ describe BirthDate do
       expect(mybirthday.birthday_today?).to eq true
     end
   end
-
-
 end
