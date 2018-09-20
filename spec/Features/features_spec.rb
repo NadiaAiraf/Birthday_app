@@ -14,7 +14,7 @@ describe Birthday do
       fill_in 'fname', with: 'aidan'
       fill_in "bdate", with: "2014/01/01"
       click_button 'Submit'
-      expect(page).to have_content('Hello aidan, you have')
+      expect(page).to have_content('Hello Aidan, you have')
       expect(page).to have_content('days until your birthday')
     end
 

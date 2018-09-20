@@ -6,7 +6,7 @@ describe BirthdayCalcs do
 
   describe '#name' do
     it 'allows the name to be returned' do
-      expect(mybirthday.name).to eq 'aidan'
+      expect(mybirthday.name).to eq 'Aidan'
     end
   end
 

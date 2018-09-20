@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Not Birthday</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/not_birthday.css">
   </head>
   <body>
     <h1>Hello <%= @birthday.name %>, you have <%= @birthday.days_to_birthday %> day<%= @birthday.multiple_days %> until your birthday</h1>
+    <br>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="<%= (100-(@birthday.days_to_birthday)*100/365).to_i %>" aria-valuemin="0" aria-valuemax="100" style="width: <%= (100-(@birthday.days_to_birthday)*100/365).to_i %>%"></div>
+    </div>
   </body>
 </html>

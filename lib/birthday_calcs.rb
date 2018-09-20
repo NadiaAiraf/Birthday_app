@@ -3,7 +3,7 @@ require 'date'
 class BirthdayCalcs
   attr_reader :name, :dob
   def initialize(name,dob)
-    @name = name
+    @name = name.capitalize
     @dob = dob
   end
 

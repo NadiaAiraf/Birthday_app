@@ -2,20 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>homepage</title>
+    <title>Birthday - Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/home.css">
   </head>
-  
+
   <body>
-    <h1><span>Hello there!</span></h1>
-    <br>
     <div>
+      <h1><span>Hello there!</span></h1>
+      <br>
       <h2>What is your name?</h2>
       <form method="post" action="/birthday">
         <input type="text" name="fname" placeholder="Type your first name" required><br>
-        <h2>When's your birthday?</h2>
+        <h2>When is your birthday?</h2>
         <input type="date" name="bdate" required><br><br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="btn btn-info"><br>
+        <br>
       </form>
     </div>
   </body>
