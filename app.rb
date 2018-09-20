@@ -1,21 +1,31 @@
-require 'sinatra'
+require 'sinatra/base'
+require 'date'
+require './lib/birthdate.rb'
 
-enable :sessions
-set :session_secret, "my secret session"
+class Birthday < Sinatra::Base
+  enable :sessions
+  set :session_secret, "my secret session"
 
-get '/' do
-  p params
-  erb(:home)
-end
+  get '/' do
+    erb :home
+  end
 
-post '/birthday' do
-  p params
-  session[:name] = params[:fname]
-  session[:date] = params[:bdate]
-  redirect '/birthday'
-end
+  get '/birthday' do
+    @birthday = session[:birthday]
+    erb :birthday
+  end
 
-get '/birthday' do
-  p session
-  erb(:birthday)
+  post '/birthday' do
+    session[:birthday] = BirthDate.new(params[:fname],params[:bdate])
+    if session[:birthday].birthday_today?
+      redirect '/birthday'
+    else
+      redirect '/not-birthday'
+    end
+  end
+
+  get '/not-birthday' do
+    @birthday = session[:birthday]
+    erb :not_birthday
+  end
 end

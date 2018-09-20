@@ -1,0 +1,27 @@
+<style>
+h1 {
+  text-align: center;
+}
+
+span {
+  background-color: pink;
+  padding: 5px 50px 5px 50px;
+}
+
+div {
+  background-color: lightblue;
+  text-align: center;
+}
+
+body {
+  background-color: lightblue;
+  text-align: center;
+  text-shadow: 2px 2px #FFFFFF;
+  font-family: fantasy;
+}
+
+#cake{
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>

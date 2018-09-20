@@ -1,11 +1,12 @@
-<style>
-h1 {
-  text-align: center;
-}
-</style>
-
-<% if (Date.parse(session[:date]) - Date.today) % 365 == 0 %>
-<h1>HAPPY BIRTHDAY YOU DUMB NERD</h1>
-<% else %>
-<h1>Hello <%= session[:name] %>, you have <%= ((Date.parse(session[:date]) - Date.today) % 365).to_i %> days until your birthday</h1>
-<% end %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>birthday page</title>
+    <link rel="stylesheet" href="/birthday.css">
+  </head>
+  <body>
+    <h1>HAPPY BIRTHDAY <%= @birthday.name.upcase %>!!!</h1>
+    <img ID="cake" src="https://d3cif2hu95s88v.cloudfront.net/live-site-2016/product-image/Cakes/strawberry-cake-8-250x250.jpg" alt="picture of a birthday cake">
+  </body>
+</html>
