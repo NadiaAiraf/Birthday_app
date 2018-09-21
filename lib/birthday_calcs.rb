@@ -8,12 +8,14 @@ class BirthdayCalcs
   end
 
   def days_to_birthday
-    ((Date.parse(dob) - Date.today) % 365).to_i
+    ((Date.parse(dob) - Date.today) % 365)
   end
 
   def birthday_today?
     (Date.parse(dob) - Date.today) % 365 == 0
   end
+
+private #-----------------------------------
 
   def multiple_days
     days_to_birthday == 1 ? '' : 's'
